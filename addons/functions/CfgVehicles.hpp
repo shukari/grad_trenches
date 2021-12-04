@@ -145,12 +145,19 @@ class CfgVehicles {
 
         class Attributes {};
     };
-    class ACE_envelope_big: ACE_envelope_small{
+    class ACE_envelope_big: BagFence_base_F {
+        author = QAUTHOR;
         displayName = CSTRING(EnvelopeBigName);
         descriptionShort = CSTRING(EnvelopeBigDescription);
+        GVAR(offset) = 1.53;
+        ace_trenches_placementData[] = {8,1.1,0};
+        editorCategory = "EdCat_Things";
+        editorSubcategory = "EdSubcat_Military";
+        GVAR(isTrench) = 1;
         ace_trenches_diggingDuration = QGVAR(bigEnvelopeDigTime);
         ace_trenches_removalDuration = QGVAR(bigEnvelopeRemovalTime);
-        GVAR(offset) = 1.53;
+        scopecurator = 2;
+        scope = 2;
         GVAR(damageMultiplier) = QGVAR(bigEnvelopeDamageMultiplier);
 
         class CamouflagePositions1 {
